@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+
+<!-- for css3 media queries to work properly on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Slide Decks in HTML</title>
+
+<!-- Copyright © 2018 Patrick Hipp -->
+<meta name="dcterms.rightsHolder" content="Copyright © 2018 Patrick Hipp"/>
+
+<link rel="stylesheet" href="rslidy.min.css"/>
+<link rel="stylesheet" href="slides-keith.css"/>
+<script src="rslidy.min.js"></script>
+</head>
+
+<body>
+
+<section class="titleslide">
+
+<h1>Slide Decks in HTML</h1>
+
+<h2>Patrick Hipp</h2>
+
+<figure>
+<div class="images">
+<img src="images/title.png" alt="Title"/>
+</div>
+</figure>
+
+<div id="location">
+<p>
+Wed 31 Oct 2018, Graz University of Technology.
+</p>
+</div>
+
+</section>
+
+
+
+
+
+
+<section>
+<h1>The Origins of Slideshows</h1>
+
+<ul>
+<li>
+In 1980 developers started to work on early prototypes of presentation software.
+</li>
+
+<li>
+Intended for artists to design slides for projectors, which had to be printed.
+</li>
+
+<li>
+<em>Forethought, Inc.</em> changed that in 1987 with the release of
+<em>PowerPoint</em> for McIntosh.
+</li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/powerpoint_forethought.png" alt="PowerPoint Splashscreen" />
+</div>
+<figcaption>
+Splash screen of PowerPoint 1.0. <br/>
+Screenshot taken from <a href="http://logos.wikia.com/wiki/Microsoft_PowerPoint"
+target="_blank">Logopedia</a> (CC-BY-SA-3.0).
+</figcaption>
+</figure>
+
+</section>
+
+
+
+
+
+<section>
+<h1>Modern Challenges</h1>
+
+<figure>
+<div class="images">
+<img src="images/global-web-stats-september-2018.svg" alt="Browser Market Share"
+/>
+</div>
+<figcaption>
+Global Browser Market Share from September 2018.<br/>
+Data from <a href="http://gs.statcounter.com/browser-market-share"
+target="_blank">StatCounter</a>.
+</figcaption>
+</figure>
+
+<ul>
+<li>Top Platform: Android 7</li>
+
+<li>Top Screen Resolution: 640x360</li>
+</ul>
+
+</section>
+
+
+
+
+
+
+
+<section>
+<h1>Modern Challenges</h1>
+
+<ul>
+  <li>Support for all modern browsers.</li>
+  <li>Support for all modern devices.</li>
+  <li>Adapting to changes in the device environment.</li>
+  <li>Cross sharing and communication between different platforms.</li>
+  <li>Accessibility.</li>
+  <li>Resilience and responsiveness.</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Additional Challenges for Slide Decks</h1>
+
+<ul>
+  <li>Hard to decipher images and graphs (especially on smaller screens).</li>
+  <li>Print support.</li>
+  <li>Navigation.</li>
+  <li>Speaker Notes.</li>
+  <li>Timer.</li>
+  <li>Many more...</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Web Basics</h1>
+
+<ul>
+<li>Hyper Text Markup Language (HTML)</li>
+
+<li style="list-style-type:none">
+<ul><li>is a markup language that defines the building blocks that make up a website.</li></ul>
+</li>
+
+<li>Cascading Style Sheets (CSS)</li>
+
+<li style="list-style-type:none">
+<ul><li>makes it possible to style those elements dynamically and change where
+and how they are displayed on thescreen.</li></ul>
+</li>
+
+<li>JavaScript</li>
+
+<li style="list-style-type:none">
+<ul><li>is a programming language that can modify the behaviour of a
+website.</li></ul>
+</li>
+
+<li>HTML defines the content of a website, CSS defines the layout of that
+content and JavaScript adds interactivity.</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Slidy & Slidy2</h1>
+
+<ul>
+<li>Developed by Dave Raggett in 2005.</li>
+
+<li>One of the first HTML based presentation frameworks.</li>
+
+<li>Slides are defined in blocks <code>&lt;div
+class="slide"&gt;...&lt;/div&gt;</code>.</li>
+
+<li>Includes: show.css, slidy.js, print.css (optional)</li>
+
+<li><a href="decks/slidy/Overview.html" target="_blank">Example</a></li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/slidy.png" alt="Slidy" />
+</div>
+<figcaption>
+Screenshot taken from <a href="https://www.w3.org/Talks/Tools/Slidy2/"
+target="_blank">Slidy2</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>S5 & S6</h1>
+
+<ul>
+<li>Stands for <em>S</em>imple <em>S</em>tandards-based <em>S</em>lide
+<em>S</em>how <em>S</em>ystem.</li>
+
+<li>Developed in 2015 by Eric Meyer.</li>
+
+<li>Similar to Slidy.</li>
+
+<li><a href="decks/s5/s5-intro.html" target="_blank">Example</a></li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/s5.png" alt="S5" />
+</div>
+<figcaption>
+Screenshot taken from <a href="https://meyerweb.com/eric/tools/s5/s5-intro.html"
+target="_blank">S5</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Diascope</h1>
+
+<ul>
+<li>Developed by Martin Stoll in 2006.</li>
+
+<li>Diascope comes in the form of a binary executable.</li>
+
+<li>The <a href="decks/diascope/diascope.webm" target="_blank">output</a> of
+diascope is an MPEG encoded video file ready for burning onto a DVD.</li>
+
+<li>The input is a list of instructions for rendering.</li>
+
+<li style="list-style-type:none">
+<pre><code>
+  create 2 white title=0,1,1,0 "Diascope\nSlideshow\nGenerator"
+  trns 0.3 luma dir=ro
+  set font=ArialB fill=gray stroke=white strokewidth=1
+
+  create 0.8 blue title=0.8 "diascope.sf.net"
+  trns 0.4 luma dir=td sharp=1
+  create 0.8 red title=0.8 "diascope.sf.net"
+  trns 0.4 luma dir=td sharp=1
+  create 0.8 yellow title=0.8 "diascope.sf.net"
+  trns 0.4 luma dir=td sharp=1
+  create 0.8 blue title=0.8 "diascope.sf.net"
+
+  trns 0.3 luma dir=ri
+  create 1 black
+</code></pre>
+</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Adobe Flash</h1>
+
+<ul>
+<li>Used to be omnipresent on the web following its release in 1996.</li>
+
+<li>Flash is a powerful tool for creating standalone interactive multimedia
+applications that can be embedded into a web site.</li>
+
+<li>Supports keyboard and mouse.</li>
+
+<li>Steve Jobs went over the shortcomings of Flash in a blogpost titled "Thoughts on Flash":</li>
+
+<li style="list-style-type:none">
+<blockquote cite="https://apple.com/hotnews/thoughts-on-flash">
+  "Flash was created during the PC era – for PCs and mice. Flash is a
+  successful business for Adobe, and we can understand why they want to push it
+  beyond PCs. But the mobile era is about low power devices, touch interfaces
+  and open web standards – all areas where Flash falls short. [...] New
+  open standards created in the mobile era, such as HTML5, will win on mobile
+  devices (and PCs too)."
+</blockquote>
+</li>
+
+<li>Flash will be officially retired in 2020.</li>
+</ul>
+
+</section>
+
+<section>
+<h1>The Four Main Classes of Modern Slide Decks</h1>
+<ul>
+  <li>Text-based slide decks.</li>
+  <li>JavaScript-based slide decks.</li>
+  <li>Hosted slide decks.</li>
+  <li>Responsive slide decks.</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Text-based Slide Decks</h1>
+
+<ul>
+<li>Do not require the slide creator to possess any knowledge about
+scripting or styling their slides.</li>
+
+<li>Either use pure plaintext or
+<a href="https://daringfireball.net/projects/markdown" target="_blank">
+Markdown</a>.</li>
+
+<li>The main advantage of this approach is the fast and easy way to write and
+read slides.</li>
+
+<li>The trade-off is less flexibility and modifiability.</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Slide Show (S9).</h1>
+
+<ul>
+<li>Command-line tool developed by Gerald Bauer</li>
+
+<li>Takes a Markdown file as input.</li>
+
+<li>Turns it into a number of different slide decks, like Slidy, S5, S6.</li>
+
+<li style="list-style-type:none">
+<pre><code>
+$ slideshow build slides.text -t s6blank
+
+=> Preparing slideshow ’slides.html’...
+=> Done.
+</code></pre>
+</li>
+
+<li>Possibility to enhance with ruby scripts.</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Slidifier</h1>
+
+<ul>
+<li>Developed by Holger Ludvigsen.</li>
+
+<li>Defines its own plaintext syntax for certain features.</li>
+
+<li><a href="decks/slidifier/slidifier.html" target="_blank">Example</a></li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/slidifier-window.png" alt="Slidifier" />
+</div>
+<figcaption>
+Screenshot taken from <a href="http://www.slidifier.com/slidifier.html"
+target="_blank">Slidifier</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Remark</h1>
+
+<ul>
+<li>Developed by Ole Petter Bang.</li>
+
+<li>Uses a mixture of HTML and Markdown.</li>
+
+<li>Extends the Markdown syntax with properties such as:</li>
+<li style="list-style-type:none">
+name, class, background-image, count, template, layout, exclude.
+</li>
+
+<li><a href="decks/remark/boilerplate-single.html"
+target="_blank">Example</a></li>
+
+<figure>
+<div class="images">
+<img src="images/remark.png" alt="Remark" />
+</div>
+<figcaption>
+Remark presenter mode.<br/>
+Screenshot taken from <a href="https://remarkjs.com"
+target="_blank">Remark</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>JavaScript-based Slide Decks</h1>
+
+<ul>
+<li>Heavy focus on scripting.</li>
+
+<li>Wide range of functionality.</li>
+
+<li>They often make use of third party packages (jQuery).</li>
+
+<li>Many of them can be installed using Node.js and npm.</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Google I/O Slides</h1>
+
+<ul>
+<li>Is an HTML template developed for Google I/O.</li>
+
+<li>Started development under the name html5slides in 2011.</li>
+
+<li>Makes use of external tools such as compass, a ruby tool for converting SASS
+into CSS styling, and python to convert markdown into HTML.</li>
+
+<li>Development has been stopped in 2015. (likely in favor of Google Slides)</li>
+
+<li><a href="decks/io/template.html" target="_blank">Example</a></li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/google-io.png" alt="Google I/O Slides" />
+</div>
+<figcaption>
+Screenshot taken from <a href="decks/io/template.html"
+target="_blank">Google I/O Slids</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Fathom.js</h1>
+
+<div class="container">
+<div>
+<ul>
+<li>Developed by Mark Dalgleish.</li>
+
+<li>Makes use of jQuery Mobile to optimize for touch controls.</li>
+
+<li>Uses the events: tap, swipe left, swipe right, scroll start, scroll
+stop and orientation change.</li>
+
+<li>Can sync a slideshow to an external video.</li>
+
+<li style="list-style-type:none">
+<pre><code>
+$('#presentation').fathom({
+  timeline: [ 0, 5, 20, 30, 40, 50, '1:00', '1:15', 90, 120, 155 ],
+  video: {
+    source: 'vimeo',
+    id: '16917950',
+    parent: '#vimeo',
+    autoplay: true
+  }
+});
+</code></pre>
+</li>
+</ul>
+</div>
+
+<div>
+<figure>
+<div class="images">
+<img src="images/fathom.png" alt="Fathom.js" />
+</div>
+<figcaption>
+Screenshot taken from <a href="http://markdalgleish.com/presentations/jquerymobile"
+target="_blank">Fathom.js</a>.
+</figcaption>
+</figure>
+</div>
+</div>
+
+</section>
+
+<section>
+<h1>Deck.js</h1>
+
+<ul>
+<li>Developed by Caleb Troughton.</li>
+
+<li>Is based on jQuery and Modernizr.</li>
+
+<li>Uses extensions to allow slide creators to create customized presentations
+that fit their needs.</li>
+
+<li><a href="decks/deck.js/introduction/index.html" target="_blank">Example</a></li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/deck.js.png" alt="Deck.js" />
+</div>
+<figcaption>
+Screenshot taken from <a href="http://imakewebthings.com/deck.js/"
+target="_blank">Deck.js</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>DZSlides</h1>
+
+<ul>
+<li>Developed by Paul Rouget.</li>
+
+<li>Is a single ready to use HTML template.</li>
+
+<li>Uses so called <q>shells</q> to further enhance the presentation.</li>
+
+<li>In order for these extensions to function, DZSlides has implemented a
+messaging system that includes:</li>
+
+<li style="list-style-type:none">
+Messages for navigation, getting and setting flags and messages that bind new event listeners.
+</li>
+
+<li><a href="decks/dzslides/shells/onstage.html#../template.html" target="_blank">Example</a></li>
+
+<figure>
+<div class="images">
+<img src="images/dzslides.png" alt="DZSlides Embedding" />
+</div>
+<figcaption>
+Shell for embedding DZSlides.<br/>
+Screenshot taken from <a href="http://paulrouget.com/dzslides/"
+target="_blank">DZSlides</a>.
+</figcaption>
+</figure>
+
+</ul>
+</section>
+
+<section>
+<h1>Bespoke.js</h1>
+
+<div class="container">
+<div>
+<ul>
+<li>Developed by Mark Dalgleish.</li>
+
+<li>Super minimal (1KB), the main package only provides<br/> basic features and
+an API, everything else is managed via plugins.</li>
+
+<li>Makes use of a <g>Generator</g> that automatically imports the needed
+plugins.</li>
+
+<li style="list-style-type:none">
+  <pre><code>
+  var bespoke = require('bespoke'),
+  cube = require('bespoke-theme-cube'),
+  keys = require('bespoke-keys'),
+  touch = require('bespoke-touch');
+
+  var deck = bespoke.from('#presentation', [
+    cube(),
+    keys(),
+    touch()
+  ]);
+  </code></pre>
+</li>
+</ul>
+</div>
+
+<div>
+<figure>
+<div class="images">
+<img src="images/bespoke.js.png" alt="Bespoke.js" />
+</div>
+<figcaption>
+Screenshot taken from <a href="http://markdalgleish.com/projects/bespoke.js/"
+target="_blank">Bespoke.js</a>.
+</figcaption>
+</figure>
+</div>
+</div>
+
+</section>
+
+<section>
+<h1>Inspire.js</h1>
+
+<ul>
+<li>Formerly known as CSSS. (up until September 2018)</li>
+
+<li>Developed by Lea Verou.</li>
+
+<li>Lean and puts a focus on reusability.</li>
+
+<li>Many unique features:</li>
+
+<li style="list-style-type:none">
+Video annotations, live code examples, reuse a slide by its ID.
+</li>
+
+<li><a href="decks/inspire.js/index.html#media-plugin" target="_blank">Example</a></li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/inspire.js.png" alt="Inspire.js" />
+</div>
+<figcaption>
+Screenshot taken from <a href="https://inspirejs.org"
+target="_blank">Inspire.js</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Reveal.js</h1>
+
+<ul>
+<li>Developed by Hakim El Hattab.</li>
+
+<li>Relies on many third party tools but is the most feature rich.</li>
+
+<li style="list-style-type:none">
+Vertically nested slides, markdown content, keyboard and touch controls, pdf
+export, speaker notes, presenter mode, math functions, lazy loading.
+</li>
+
+<li>Highly configurable as well: rtl, autoSlide, history.</li>
+
+<li>Has an online editor at: <a href="https://slides.com/"
+target="_blank">slides.com</a>.</li>
+
+<li><a href="decks/reveal.js/demo.html" target="_blank">Example</a></li>
+
+<figure>
+<div class="images">
+<img src="images/reveal.js.png" alt="Reveal.js" />
+</div>
+<figcaption>
+Reaveal.js in its sky theme.<br/>
+Screenshot taken from <a href="https://revealjs.com/#/themes"
+target="_blank">Reveal.js</a>.
+</figcaption>
+</figure>
+
+</ul>
+</section>
+
+<section>
+<h1>Impress.js</h1>
+
+<div class="container">
+<div>
+<ul>
+<li>Developed by Bartek Szopka and Henrik Ingo.</li>
+
+<li>Puts a focus on stunning transitions and animations, which are made possible
+by CSS3 transformations.</li>
+
+<li>The entire presentation is set up on one infinite canvas that is traversed
+by a camera. (Similar to Prezi)</li>
+
+<li style="list-style-type:none">
+  <pre><code>
+  &lt;div class="step" data-x="6200" data-y="4300" data-z="-100"
+  data-rotate-x="-40" data-rotate-y="10" data-scale="2"&gt;
+    &lt;p&gt;one more thing...&lt;/p&gt;
+  &lt;/div&gt;
+  </code></pre>
+</li>
+
+<li><a href="decks/impress.js/index.html" target="_blank">Example</a></li>
+
+</ul>
+</div>
+
+<div>
+<figure>
+<div class="images">
+<img src="images/impress.js.png" alt="Impress.js" />
+</div>
+<figcaption>
+Impress.js in speaker mode.<br/>
+Screenshot taken from <a href="https://impress.js.org"
+target="_blank">Impress.js</a>.
+</figcaption>
+</figure>
+</div>
+</div>
+
+</section>
+
+<section>
+<h1>Hosted Slide Decks</h1>
+
+<ul>
+<li>Are neatly packed into a web application.</li>
+
+<li>Also serve the tools for creating slides.</li>
+
+<li>Everything is in the cloud!</li>
+</ul>
+</section>
+
+<section>
+<h1>Google Slides</h1>
+
+<ul>
+<li>Are a part of Google's free online office suite.</li>
+
+<li>Can export and import to and from PowerPoint files.</li>
+
+<li>Multiple slide creators can edit a presentation simultaneously.</li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/google-slides.png" alt="Google Slides Template Gallery" />
+</div>
+<figcaption>
+Template Gallery of Google Slides.<br/>
+Screenshot taken from <a href="https://docs.google.com/presentation/u/0/?ftv=1"
+target="blank">Google Slides</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Prezi</h1>
+
+<div class="container">
+<div>
+<ul>
+<li>Originally developed as an app for iOS, Android and Flash.</li>
+
+<li>An HTML5 based hosted version was released in 2017 titled <q>Prezi
+Next</q>.</li>
+
+<li>Acquired Infogram, a data visualization platform.<br />
+This allowed them to include tools to:</li>
+
+<li style="list-style-type:none">
+<ul>
+  <li>Graph charts and figures.</li>
+  <li>Analyse how much time viewers spend on each slide, how many people viewed the presentation and how many of them shared it.</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div>
+<figure>
+<div class="images">
+<img src="images/prezi-plans.png" alt="Prezi Pricing." />
+</div>
+<figcaption>
+Prezi subscription plans.<br/>
+Screenshot taken from <a href="https://prezi.com/pricing" target="_blank">
+prezi.com/pricing</a>.
+</figcaption>
+</figure>
+</div>
+</div>
+
+</section>
+
+<section>
+<h1>Showoff</h1>
+
+<ul>
+<li><q>Don’t just present; interact with your audience!</q></li>
+
+<li>It supports markdown, live code execution, speaker notes and a presenter
+mode.</li>
+
+<li>Unlike traditional slide decks, Showoff also includes live quizzes, polls
+and feedback questions.</li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/showoff.png" alt="Showoff interaction" />
+</div>
+<figcaption>
+Showoff presenter view displaying audience questions.<br/>
+Screenshot taken from <a href="https://github.com/puppetlabs/showoff"
+target="_blank">GitHub</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Responsive Slide Decks</h1>
+
+<ul>
+<li>Ethan Marcotte describes the main three pillars of <q>Responsive Web
+Design</q> as flexible grids, fluid images and media queries.</li>
+
+<li>Makes it possible to respond to changes in the browser environment and
+adjust how a web site or application gets displayed accordingly.</li>
+
+<li>Can run on a multitude of display sizes and <em>sniff</em> for features rather than requiring them.</li>
+</ul>
+</section>
+
+<section>
+<h1>Stack</h1>
+
+<ul>
+<li>Developed by Mike Bostock.</li>
+
+<li>Stacks slides vertically rather than going through them horizontally.</li>
+
+<li>The primary method of navigation is scrolling, which automatically handles
+touch support.</li>
+
+<li>Adjusts the scaling of slides automatically, but keeps a constant aspect ratio.</li>
+
+<li>Activate and deactivate functions can be attached on slide transitions.</li>
+
+<li><a href="decks/stack/index.html" target="_blank">Example</a></li>
+
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/stack.png" alt="Stack" />
+</div>
+<figcaption>
+Screenshot taken from <a href="https://mbostock.github.io/stack/"
+target="_blank">Stack</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Scrolldeck.js</h1>
+
+<ul>
+<li>Developed by John Polacek.</li>
+
+<li>Enhances the idea behind stack by using jQuery and Scrollorama.</li>
+
+<li>Adds support for animations, incremental lists, an optional sticky
+navigation header and improves the resizing of slides.</li>
+
+<li><a href="decks/scrolldeck.js/decks/responsive/index.html"
+target="_blank">Example</a></li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/scrolldeck.js.png" alt="Scrolldeck.js" />
+</div>
+<figcaption>
+Scrolldeck.js displaying two images with parallax scrolling.<br/>
+Screenshot taken from <a
+href="https://johnpolacek.github.io/scrolldeck.js/decks/parallax/"
+target="_blank">Scrolldeck.js</a>.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+<h1>Conclusion</h1>
+
+<ul>
+<li>More open, creative and varied approaches are starting to take the
+spotlight.</li>
+
+<li>In the future, there will be an even greater focus on collaboration and
+sharing, as can be seen by the most popular tools in use right now.</li>
+
+<li>Although they are not perfect by any means, slide decks built for the web
+are a viable alternative for creating state-of-the-art slideshows.</li>
+</ul>
+</section>
+
+<section>
+<h1>Rslidy</h1>
+
+<ul>
+<li>A responsive slide deck built upon Slidy and Slidy2.</li>
+<li>Responsive HTML5, CSS3, JavaScript (TypeScript). No other dependencies.</li>
+<li>Now in its fourth iteration.</li>
+
+</section>
+
+<section>
+<h1>Rslidy</h1>
+
+<div class="speakernotes">1. First notes.<br>2. Second notes.<br>3. Third notes.</div>
+
+<ul>
+<li>Feature rich: Overview, table of contents, slide transitions, progress bar,
+image viewer with pan and zoom, low light mode, incremental lists, speaker
+notes.</li>
+<li>Responsive: Print sheet, portrait and landscape mode.</li>
+<li>Supports: Keyboard, mouse, touch, tilt, shake, tap, pinch, swipe
+controls.</li>
+<li>Configurable.</li>
+</ul>
+
+<figure>
+<div class="images">
+<img src="images/rslidy.png" alt="Rslidy" />
+</div>
+<figcaption>
+Screenshot taken from Rslidy.
+</figcaption>
+</figure>
+
+</section>
+
+<section class="titleslide">
+<h1>Thanks for your attention!</h1>
+<h2>Questions?</h2>
+</section>
+
+</body>
+</html>
