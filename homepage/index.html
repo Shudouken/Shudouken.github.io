@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>Homepage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      body {
+        background: #F1F1F1;
+      }
+
+      #searches {
+        text-align: center;
+        margin-top: 15%;
+        margin-bottom: 5%;
+      }
+
+      #searches form {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      #searches form .input {
+        color: #FFF;
+        opacity: 0.4 !important;
+        width: 15px;
+        height: 50px;
+        padding: 3px 5px;
+        font-size: 16px;
+        border: 1px solid lightgrey;
+        transition: all 0.5s;
+      }
+
+      #searches form .input:focus,
+      #searches form .input:hover {
+        color: #000;
+        opacity: 1 !important;
+        width: 400px;
+        box-shadow: 0 0 5px rgba(0,191,255, 1);
+        border: 1px solid #00BFFF;
+      }
+
+      #links {
+        text-align: center;
+      }
+
+      #links a {
+        margin: 0 10px;
+        text-decoration: none;
+        outline: none;
+        color: #003F77;
+	      text-decoration: none;
+        font-size: 24px;
+        transition: all 0.5s;
+      }
+
+      #links a:hover {
+      	color: #00BFFF;
+      }
+    </style>
+	</head>
+	<body>
+    <div id="searches">
+      <form method="get" action="https://google.com/search">
+        <input type="text" name="q" class="input" placeholder="Google" autofocus="autofocus" />
+      </form>
+      <form method="get" action="https://youtube.com/results">
+        <input type="text" name="search_query" class="input" placeholder="Youtube" />
+      </form>
+      <form method="get" action="http://jisho.org/words">
+        <input type="text" name="jap" class="input" placeholder="Jisho (日本語)" />
+      </form>
+      <form method="get" action="http://jisho.org/words">
+        <input type="text" name="eng" class="input" placeholder="Jisho (English)" />
+      </form>
+      <form method="get" action="https://www.dict.cc/">
+        <input type="text" name="s" class="input" placeholder="dict.cc" />
+      </form>
+    </div>
+    <div id="links">
+      <p>
+        <a href="https://www.youtube.com/feed/subscriptions?flow=2">Youtube</a>
+        <a href="https://www.twitter.com">Twitter</a>
+        <a href="https://www.twitch.com">Twitch</a>
+        <a href="https://www.resetera.com">ResetEra</a>
+      </p>
+      <p>
+        <a href="https://drive.google.com/drive/my-drive">Drive</a>
+        <a href="https://docs.google.com/document/u/0/">Docs</a>
+        <a href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>
+        <a href="https://docs.google.com/presentation/u/0/">Slides</a>
+      </p>
+    </div>
+	</body>
+</html>
+
