@@ -9,8 +9,8 @@
 
 <title>Andrews - Responsive Web Design</title>
 
-<!-- Copyright © 2018 Keith Andrews -->
-<meta name="dcterms.rightsHolder" content="Copyright © 2018 Keith Andrews"/>
+<!-- Copyright © 2019 Keith Andrews -->
+<meta name="dcterms.rightsHolder" content="Copyright © 2019 Keith Andrews"/>
 
 <link rel="stylesheet" href="rslidy.min.css"/>
 <link rel="stylesheet" href="slides-keith.css"/>
@@ -30,21 +30,21 @@
 
 <p>
 Web site:<br/>
-<a href="http://isds.tugraz.at/keith/">
-<code>http://isds.tugraz.at/keith/</code>
+<a href="https://isds.tugraz.at/keith/">
+<code>https://isds.tugraz.at/keith/</code>
 </a>
 <br/>
 <br/>
 Slides:<br/>
-<a href="http://keithandrews.com/talks/2018/iaweb-2018-10-12-rwd/">
-<code>http://keithandrews.com/talks/2018/iaweb-2018-10-12-rwd/</code>
+<a href="https://keithandrews.com/talks/2019/iaweb-2019-10-11-rwd/">
+<code>https://keithandrews.com/talks/2019/iaweb-2019-10-11-rwd/</code>
 </a>
 </p>
 
 
 <div id="location">
 <p>
-Fri 12 Oct 2018, IAweb, Graz University of Technology.
+Fri 11 Oct 2019, IAweb, Graz University of Technology.
 </p>
 </div>
 
@@ -580,11 +580,11 @@ A typical breakpoint diagram.
 
 <li><span class="li-intro">Between breakpoints</span>: fluid (scalable) layout.
 <ul>
-<li>Heights in rem, vh, or em.</li>
-<li>Widths in rem, %, vw, or em.</li>
+<li>Heights in em or rem.</li>
+<li>Widths in %, em, or rem.</li>
 <li>Absolute units (px, mm, cm, in) are forbidden!</li>
 <li>Use vector graphics (SVG) where possible.</li>
-<li>CSS Grid and Flexbox for layout.</li>
+<li>Flexbox is wonderful!</li>
 </ul>
 </li>
 
@@ -605,22 +605,22 @@ A typical breakpoint diagram.
 <section>
 <h1>Specifying Breakpoints with CSS3 Media Queries</h1>
 
-<pre>
+<code class="block">
 /* settings for window-width: narrow */
-@media only all and (max-width: 40rem) {
+@media only all and (max-width: 40em) {
 ...
 }
 
 /* settings for window-width: medium */
-@media only all and (min-width: 40rem) and (max-width: 60rem) {
+@media only all and (min-width: 40em) and (max-width: 60em) {
 ...
 }
 
 /* settings for window-width: wide */
-@media only all and (min-width: 60rem) {
+@media only all and (min-width: 60em) {
 ...
 }
-</pre>
+</code>
 
 </section>
 
@@ -655,9 +655,12 @@ text-overflow: ellipsis;
 </code>
 or use CSS3 columns:
 <code class="block">
-column-count: 2;
-column-rule: 0.1em solid #bbb;
-column-gap: 2em;
+-webkit-column-count: 2;
+-webkit-column-rule: 0.1em solid #bbb;
+-webkit-column-gap: 2em;
+-moz-column-count: 2;
+-moz-column-rule: 0.1em solid #bbb;
+-moz-column-gap: 2em;
 </code>
 </li>
 
@@ -665,18 +668,18 @@ column-gap: 2em;
 
 
 <li>Pack content more tightly on narrow screens:
-<pre>
+<code class="block">
 line-height: 1.2;
 word-spacing: -0.1em;
 letter-spacing: -0.05em;
-</pre>
+</code>
 </li>
 
 
 
 <li>
 Turn on hyphenation:
-<pre>
+<code class="block">
 body {
   hyphens: auto;
 }
@@ -684,7 +687,7 @@ body {
 code, var, kbd, samp, listing, plaintext, xmp, abbr {
   hyphens: none;
 }
-</pre>
+</code>
 </li>
 
 
@@ -692,7 +695,7 @@ code, var, kbd, samp, listing, plaintext, xmp, abbr {
 
 <li>
 Turn on justification in general:
-<pre>
+<code class="block">
 p {
   text-align: justify;
 }
@@ -704,7 +707,7 @@ p {
   text-align: left;
 }
 }
-</pre>
+</code>
 </li>
 
 
@@ -816,10 +819,10 @@ Colour-coding to identify cells corresponding to column header.
 
 <li><span class="li-intro">Dynamic image resizing</span>: rescaling
   an image in the browser.
-<pre>
+<code class="block">
 width: auto;
 max-height: 20em;
-</pre>
+</code>
 </li>
 
 
@@ -862,12 +865,12 @@ picture element --&gt; RespImg Syntax proposal (src-n)
 <code>http://tabatkins.github.io/specs/respimg/Overview.html</code></a><br/>
 </p>
 
-<pre>
+<code class="block">
 &lt;img alt="Photo of Keith."
   src-1="(max-width: 300px) keith-s.jpg"
   src-2="(max-width: 600px) keith-m.jpg"
   src="keith-l.jpg" /&gt;
-</pre>
+</code>
 
 <p>
 Today, we can use the picturefill polyfill:<br/>
@@ -881,9 +884,9 @@ Today, we can use the picturefill polyfill:<br/>
 
 <li><span class="li-intro">Adapt images based on
 screen res (retina display)</span>:
-<pre>
+<code class="block">
 @media print and (min-resolution: 300dpi) {...}
-</pre>
+</code>
 </li>
 
 
@@ -967,9 +970,9 @@ screen res (retina display)</span>:
 
 
 <li>Orientation<br/>
-<pre>
+<code class="block">
 @media all and (orientation: landscape) {...}
-</pre>
+</code>
 </li>
 
 <li>Location</li>
@@ -1093,14 +1096,14 @@ or How I learned to Stop Worrying and Love the Mobile Web</em>;
 
 <p>
 Web site:<br/>
-<a href="http://isds.tugraz.at/keith/">
-<code>http://isds.tugraz.at/keith/</code>
+<a href="https://isds.tugraz.at/keith/">
+<code>https://isds.tugraz.at/keith/</code>
 </a>
 <br/>
 <br/>
 Slides:<br/>
-<a href="http://keithandrews.com/talks/2018/iaweb-2018-10-12-rwd/">
-<code>http://keithandrews.com/talks/2018/iaweb-2018-10-12-rwd/</code>
+<a href="https://keithandrews.com/talks/2019/iaweb-2019-10-11-rwd/">
+<code>https://keithandrews.com/talks/2019/iaweb-2019-10-11-rwd/</code>
 </a>
 </p>
 

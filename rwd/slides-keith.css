@@ -130,7 +130,7 @@ figcaption span.credit:after {
 
 code.block {
   display: inline-block;
-  margin-right:100%;
+  width: 100%;
   white-space: pre;
   margin-left: 1em;
   margin-bottom: 1em;
