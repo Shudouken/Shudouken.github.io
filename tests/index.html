@@ -32,12 +32,13 @@
 /* tridiv iphone 4s made by https://juliangarnier.com/ */
 #tridiv
          {
-            width: 100px;
-            height: 650px;
+            width: 150px;
+            height: 500px;
             position: relative;
             margin: 30px auto;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
+            transform: scale(0.7);
          }
 .scene, .shape, .face, .face-wrapper, .cr {
   position: absolute;
@@ -1341,6 +1342,7 @@
             window.addEventListener('deviceorientation', function(event) {
                document.getElementById('tridiv').style.webkitTransform =
                document.getElementById('tridiv').style.transform =
+                       'scale(0.7) ' +
                        'rotateX(' + event.beta + 'deg) ' +
                        'rotateY(' + event.gamma + 'deg) ' +
                        'rotateZ(' + event.alpha + 'deg)';
