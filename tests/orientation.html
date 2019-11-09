@@ -38,7 +38,7 @@
             margin: 30px auto;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-            transform: scale(0.7);
+            transform: scale(0.7) rotateY(180deg);
          }
 .scene, .shape, .face, .face-wrapper, .cr {
   position: absolute;
@@ -1342,7 +1342,7 @@
             window.addEventListener('deviceorientation', function(event) {
                document.getElementById('tridiv').style.webkitTransform =
                document.getElementById('tridiv').style.transform =
-                       'scale(0.7)' +
+                       'scale(0.7) rotateY(180deg)' +
                        'rotateX(' + event.beta + 'deg) ' +
                        'rotateY(' + event.gamma + 'deg) ' +
                        'rotateZ(' + event.alpha + 'deg)';
