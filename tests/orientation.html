@@ -1331,27 +1331,47 @@
                <span id="gamma" class="value">null</span>)
             </p>
          </div>
+         <div>
+            <button onclick="onClick()">Request Permissions</button>
+         </div>
       </div>
- 
-      <script>
-         if (!window.DeviceOrientationEvent) {
-            document.getElementById('do-unsupported').classList.remove('hidden');
-         } else {
-            document.getElementById('do-info').classList.remove('hidden');
- 
-            window.addEventListener('deviceorientation', function(event) {
-               document.getElementById('tridiv').style.webkitTransform =
-               document.getElementById('tridiv').style.transform =
-                       'scale(0.7)' +
-                       'rotateX(' + -(event.beta) + 'deg) ' +
-                       'rotateY(' + -(event.gamma) + 'deg) ' +
-                       'rotateZ(' + -(event.alpha) + 'deg)';
- 
-               document.getElementById('beta').innerHTML = Math.round(event.beta);
-               document.getElementById('gamma').innerHTML = Math.round(event.gamma);
-               document.getElementById('alpha').innerHTML = Math.round(event.alpha);
-            });
-         }
-      </script>
+
+<script>
+    if (!window.DeviceOrientationEvent) {
+      document.getElementById('do-unsupported').classList.remove('hidden');
+    } else {
+      window.addEventListener('deviceorientation', function(event) {
+        handle(event);
+      });
+    }
+
+    function handle(event) {
+      document.getElementById('tridiv').style.webkitTransform =
+      document.getElementById('tridiv').style.transform =
+              'scale(0.7)' +
+              'rotateX(' + -(event.beta) + 'deg) ' +
+              'rotateY(' + -(event.gamma) + 'deg) ' +
+              'rotateZ(' + -(event.alpha) + 'deg)';
+
+      document.getElementById('beta').innerHTML = Math.round(event.beta);
+      document.getElementById('gamma').innerHTML = Math.round(event.gamma);
+      document.getElementById('alpha').innerHTML = Math.round(event.alpha);
+    }
+
+    function onClick() {
+      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        DeviceOrientationEvent.requestPermission()
+          .then(permissionState => {
+            if (permissionState === 'granted') {
+              window.addEventListener('deviceorientation', function(event) {
+                handle(event);
+              });
+            }
+          })
+          .catch(console.error);
+      }
+    }
+</script>
+
    </body>
 </html>
