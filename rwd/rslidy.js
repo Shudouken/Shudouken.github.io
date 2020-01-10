@@ -295,7 +295,7 @@ var Rslidy = /** @class */ (function () {
         var speaker_notes_overlay = document.getElementById("rslidy-speakernotes-overlay");
         speaker_notes_overlay.addEventListener("touchstart", function (e) {
             return _this.content.onTouchstart(e);
-        });
+        }, { passive: true });
         // Window listeners
         window.onresize = function (e) {
             this.overview.adjustOverviewPanel();
@@ -1912,8 +1912,8 @@ var ContentComponent = /** @class */ (function () {
             }, function () { });
             window.rslidy.toolbar.closeMenuOnBlur();
         });
-        this.view.addEventListener("touchstart", function (e) { return _this.onTouchstart(e); });
-        this.view.addEventListener("touchmove", function (e) { return _this.onTouchmove(e); });
+        this.view.addEventListener("touchstart", function (e) { return _this.onTouchstart(e); }, { passive: true });
+        this.view.addEventListener("touchmove", function (e) { return _this.onTouchmove(e); }, { passive: true });
         this.view.addEventListener("touchend", function (e) { return _this.onTouchend(e); });
         this.view.querySelector("#rslidy-button-current").addEventListener("click", function () { return window.rslidy.toolbar.displayToggleClicked(); });
     }
@@ -2498,7 +2498,7 @@ var ImageViewerComponent = /** @class */ (function () {
                     _this.applyOffset(false);
                 }
             }
-        });
+        }, { passive: true });
         this.view.addEventListener("mousedown", function (mouseDownEvent) {
             mouseDownEvent.preventDefault();
             if (!_this.isInsideContainer) {
