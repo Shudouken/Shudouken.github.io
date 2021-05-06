@@ -4,17 +4,9 @@ Keith Andrews: extra CSS for my rslidy slides
 */
 
 #rslidy-content-section .slide {
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
-/*
-Flex
-*/
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
 
 
 span.li-intro {
@@ -139,17 +131,10 @@ figcaption span.credit:after {
 code.block {
   display: inline-block;
   margin-right:100%;
-  white-space: pre;
   margin-left: 1em;
   margin-bottom: 1em;
-/* background-color: lightblue; */
 }
 
-/*
-https://stackoverflow.com/questions/14831866/breaking-to-a-new-line-with-inline-block
-margin-right:100%  100% as wide as parent, i.e. next element
-is pushed to a new line
-*/
 
 
 
