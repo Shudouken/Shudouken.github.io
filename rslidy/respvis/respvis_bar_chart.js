@@ -33,7 +33,7 @@ function respvis_bar_chart () {
       .groupedBarChart()
       .mainValues(sites)
       .mainScale(siteScale)
-      .mainTitle('Market Share')
+      .mainTitle('Share')
       .crossValues(revenues)
       .crossScale(revenueScale)
       .crossTitle('Percentage')

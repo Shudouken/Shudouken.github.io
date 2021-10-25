@@ -54,6 +54,20 @@
 
 .footer {
   margin-top: auto;
-  font-size: 70%;
-  text-align: left;
+  font-size: 50%;
+  text-align: right;
+}
+
+div.copyright {
+  margin-top: 2em;
+  text-align: right;
+}
+
+div.copyright p {
+  display: inline-block;
+  background-color: #eee;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-size: 60%;
+  max-width: 35%;
 }
