@@ -36,7 +36,7 @@ function respvis_bar_chart () {
       .mainTitle('Share')
       .crossValues(revenues)
       .crossScale(revenueScale)
-      .crossTitle('Percentage')
+      .crossTitle('Percent')
       .keys(keys),
     bars = barChart
       .bars()

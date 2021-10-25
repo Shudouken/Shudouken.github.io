@@ -1,9 +1,3 @@
-/* Increase the default font size */
-
-#rslidy-content-section .slide {
-  font-size: 2em;
-}
-
 /* Set the default font color and padding for slides */
 
 .slide {
@@ -22,7 +16,7 @@
   font-size: 4rem;
   color: #f62546;
   margin-left: 4rem;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .titleslide h2, .closingslide h2 {
