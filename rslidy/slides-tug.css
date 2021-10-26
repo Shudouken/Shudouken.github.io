@@ -10,6 +10,8 @@
 .titleslide {
   background: url("images/background.png") no-repeat center, linear-gradient(white 0%, gray 100%);
   background-size: contain;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleslide h1, .closingslide h1 {
@@ -53,7 +55,7 @@
 }
 
 div.copyright {
-  margin-top: 2em;
+  margin-top: auto;
   text-align: right;
 }
 
@@ -64,4 +66,10 @@ div.copyright p {
   border-radius: 0.2em;
   font-size: 60%;
   max-width: 35%;
+}
+
+/* Resize respvis title labels */
+.respvis-title {
+  font-size: 75%;
+  letter-spacing: 0.1em !important;
 }

@@ -4065,7 +4065,7 @@ var respVis = (function (exports, d3Scale, d3Selection, d3Transition, d3Axis, d3
 	}
 
 	function titleTextAttributes(arg) {
-	    return arg.attr('letter-spacing', '0.5em').attr('font-weight', 'bold');
+	    return arg.attr('letter-spacing', '0.5em').attr('font-weight', 'bold').attr("class", "respvis-title");
 	}
 
 	function verticalTextAttributes(arg) {
