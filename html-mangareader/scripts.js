@@ -482,6 +482,18 @@ function setupListeners() {
   window.onkeyup = function (e) { return keyPressed(e); };
 }
 
+// adds a filler page to offset the double page layout
+function toggleFillerPage() {
+  let filler = document.getElementById("_-1");
+  if(filler) {
+    filler.remove();
+  } else {
+    let page = pageTemplate(-1, "");
+    let mp = document.getElementById("manga-pages");
+    mp.insertBefore(htmlToElement(page), mp.firstChild);
+  }
+}
+
 function keyPressed(e) {
   var key = e.keyCode ? e.keyCode : e.which;
 
@@ -491,6 +503,9 @@ function keyPressed(e) {
       change.initEvent('change', false, true);
       doubleCheckbox.checked = !doubleCheckbox.checked;
       doubleCheckbox.dispatchEvent(change);
+      break;
+    case 70: //F
+      toggleFillerPage();
       break;
     default:
       //console.log("Key event: " + key + " " + String.fromCharCode(key));

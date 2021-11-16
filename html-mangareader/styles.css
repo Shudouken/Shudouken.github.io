@@ -70,6 +70,20 @@ body.seamless {
   max-width: 49.5vw;
 }
 
+.double-page-view .page:nth-child(odd)  .next,
+.double-page-view .page:nth-child(even) .prev {
+  display: none;
+  visibility: hidden;
+}
+
+.double-page-view .page:nth-child(even) .next {
+  left: 0;
+}
+
+.double-page-view .page:nth-child(odd) .prev {
+  right: 0;
+}
+
 /* Override user agent stylesheet */
 button,
 input {
